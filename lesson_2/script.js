@@ -1,9 +1,9 @@
 const canvas = document.getElementById("myCanvas");
 const ctx = canvas.getContext("2d");
+const dx = 2;
+const dy = -2;
 let x = canvas.width/2;
 let y = canvas.height-30;
-let dx = 2;
-let dy = -2;
 
 function drawBall() {
     ctx.beginPath();
