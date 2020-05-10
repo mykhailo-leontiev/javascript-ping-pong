@@ -8,7 +8,7 @@ let y = canvas.height-30;
 function drawBall() {
     ctx.beginPath();
     ctx.arc(x, y, 10, 0, Math.PI*2);
-    ctx.fillStyle = "#0095DD";
+    ctx.fillStyle = "rgba(255, 0, 0, 1";
     ctx.fill();
     ctx.closePath();
 }
@@ -18,6 +18,8 @@ function draw() {
     drawBall();
     x += dx;
     y += dy;
+    if(x<0 || x>canvas.width) {dx = -dx;}
+    if(y<0 || y>canvas.height) {dy = -dy;} 
 }
 
-setInterval(draw, 10);
+setInterval(draw, 10 );
